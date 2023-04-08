@@ -8,6 +8,7 @@ module.exports = async function (context, req) {
         ? "Goedemiddag, " + name + ". Irfan triggered HTTP function executed successfully."
         : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
 
+    /*
     // Beginning of MongoDB read
     const directConnectionClient = await MongoClient.connect(
         process.env.DATABASE_URL,
@@ -29,6 +30,10 @@ module.exports = async function (context, req) {
 		directConnectionClient.close();
     }
     // End of MongoDB read
+    */
+
+    context.log(process.env.DATABASE_URL);
+
 
     context.res = {
         // status: 200, /* Defaults to 200 */
